@@ -1,0 +1,19 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #1f3342; background:#e7f5ff; }
+body { margin: 0; }
+button { cursor: pointer; border: 1px solid #aac8dc; background: #f9fdff; border-radius: 8px; padding: 8px 10px; }
+.title-screen,.ending-screen { min-height: 100vh; display:grid; place-items:center; gap:8px; background: linear-gradient(#eaf8ff,#dbf0ff); }
+.title-screen h1 { font-size: 54px; font-weight: 500; letter-spacing: 2px; margin:0; }
+.game-root { min-height: 100vh; display: grid; grid-template-columns: 1fr 300px; gap: 14px; padding: 14px; transition: filter .6s ease; }
+.aquarium { position: relative; border-radius: 16px; border: 1px solid #a8d5ea; overflow: hidden; background: linear-gradient(#b8e8ff,#95d5f8); min-height: 78vh; transition: transform .6s, filter .6s, background .8s; }
+.aquarium.zoom { transform: scale(1.03); filter: contrast(1.03); }
+.aquarium.revealed { background: linear-gradient(#8092a0,#5f6d77); }
+.aquarium.flash { filter: brightness(0.25); }
+.water { position:absolute; inset:0; background: radial-gradient(circle at 30% 20%,#ffffff55,transparent 50%); }
+.fish { position: absolute; transform-origin: center; transition: opacity .6s; }
+.fish-svg { width: 100%; height: auto; fill: none; stroke: #254f67; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.fish-svg.human { stroke: #f2f5f8; }
+.panel { background:#f3fbff; border:1px solid #c0dcec; border-radius: 12px; padding: 10px; display:flex; flex-direction:column; gap:8px; }
+.panel-surveil { background:#1e252a; color:#d4dee5; border-color:#3c4a53; }
+.event-text { position: fixed; left: 30px; bottom: 24px; background:#00000099; color: #fff; padding: 12px 16px; border-radius: 8px; }
+.observer-hint { position: fixed; right: 18px; bottom: 12px; font-size: 12px; opacity: .65; }
+.revealed-ui { filter: saturate(.58) contrast(1.05); }
